@@ -23,7 +23,7 @@
         <div class="titleBox"></div>
         <!-- 登录 -->
         <div class="login_box" id="link_login">
-            <form class="layui-form" action="">
+            <form class="layui-form" id="login_form">
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
                     <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名"
@@ -31,7 +31,7 @@
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="userpassword" lay-verify="required|pwd" autocomplete="off"
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off"
                         placeholder="请输入密码" class="layui-input">
                 </div>
                 <div class="layui-form-item">
@@ -54,12 +54,12 @@
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="userpassword" lay-verify="required|pwd" autocomplete="off"
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off"
                         placeholder="请输入密码" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="reuserpassword" lay-verify="required|pwd|repwd" autocomplete="off"
+                    <input type="password" name="repassword" lay-verify="required|pwd|repwd" autocomplete="off"
                         placeholder="请确认密码" class="layui-input">
                 </div>
                 <div class="layui-form-item">
@@ -77,6 +77,8 @@
     <script src="./assets/lib/layui/layui.all.js"></script>
     <!-- jquery -->
     <script src="./assets/lib/jquery.js"></script>
+    <!-- 拼接请求地址 -->
+    <script src="./assets/js/baseApi.js"></script>
     <!-- my js -->
     <script src="./assets/js/login.js"></script>
 </body>
