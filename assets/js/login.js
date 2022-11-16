@@ -18,7 +18,7 @@ $(function () {
             , '密码必须6到12位，且不能出现空格'
         ],
         repwd: function (value) {
-            let pwd = $('#link_reg [name=userpassword]').val()
+            let pwd = $('#link_reg [name=password]').val()
             if (value !== pwd) {
                 return '两次密码输入不一致'
             }
@@ -29,11 +29,12 @@ $(function () {
     // 注册提交post事件
     $('#reg_form').on('submit', function (e) {
         e.preventDefault()
-        $.post('/api/reguser', { username: $("#reg_form [name=username]").val(), password: $("#reg_form [name=userpassword]").val() }, function (res) {
-            if (res.ststus === 1) {
+        $.post('/api/reguser', { username: $("#reg_form [name=username]").val(), password: $("#reg_form [name=password]").val() }, function (res) {
+            if (res.status === 1) {
                 return layer.msg(res.message)
             }
             layer.msg('注册成功')
+            console.log(res)
             $('#reg_form a').click()
             //jquery没有reset()方法，原生的才有
             $('#reg_form')[0].reset()
