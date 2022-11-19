@@ -1,6 +1,5 @@
 $(function () {
     getUserinfo()
-
     layer = layui.layer
     $('#btnLogout').on('click', function () {
         // console.log('ok')
@@ -15,6 +14,8 @@ $(function () {
         });
     })
 })
+
+
 function getUserinfo() {
     $.ajax({
         method: 'get',
