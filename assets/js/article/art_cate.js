@@ -125,6 +125,7 @@ $(function () {
                     }
                     layer.msg('删除成功')
                     layer.close(index)
+                    initArtCateList()
                 }
 
             })
